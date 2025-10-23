@@ -3,6 +3,7 @@ import { Header } from "./components/Header.jsx";
 import { About } from "./components/About.jsx";
 import { Projects } from "./components/Projects.jsx";
 import { Testimonials } from "./components/Testimonials.jsx";
+import { Contact } from "./components/Contact.jsx";
 const App = () => {
   return (
     <div className="w-full overflow-hidden">
@@ -10,6 +11,7 @@ const App = () => {
       <About />
       <Projects />
       <Testimonials />
+      <Contact />
     </div>
   );
 };
