@@ -1,6 +1,6 @@
 import { assets, testimonialsData } from "../assets/assets";
 
-export const testimonials = () => {
+export const Testimonials = () => {
   return (
     <div
       className="container mx-auto py-10 lg:px-32 w-full overflow-hidden"

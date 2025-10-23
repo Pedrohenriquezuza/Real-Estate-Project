@@ -19,17 +19,17 @@ export function NavBar() {
       <div className="container mx-auto flex justify-between items-center py-4 px-6 m:px-20 lg:px-32 bg-transparent">
         <img src={assets.logo} alt="logo of webiste" />
         <ul className="hidden md:flex gap-7 text-white">
-          <a href="#Header" className="cursor-pointer hover:text-gray-400">
+          <a href="#header" className="cursor-pointer hover:text-gray-400">
             Home
           </a>
-          <a href="#About" className="cursor-pointer hover:text-gray-400">
+          <a href="#about" className="cursor-pointer hover:text-gray-400">
             About
           </a>
-          <a href="#Projects" className="cursor-pointer hover:text-gray-400">
+          <a href="#projects" className="cursor-pointer hover:text-gray-400">
             Projects
           </a>
           <a
-            href="#Testimonials"
+            href="#testimonials"
             className="cursor-pointer hover:text-gray-400"
           >
             Testimonials
