@@ -2,14 +2,14 @@ import React from "react";
 import { Header } from "./components/Header.jsx";
 import { About } from "./components/About.jsx";
 import { Projects } from "./components/Projects.jsx";
-import { Testimonails } from "./components/Testimonails.jsx";
+import { Testimonials } from "./components/Testimonails.jsx";
 const App = () => {
   return (
     <div className="w-full overflow-hidden">
       <Header />
       <About />
       <Projects />
-      <Testimonails />
+      <Testimonials />
     </div>
   );
 };
