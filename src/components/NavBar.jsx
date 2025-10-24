@@ -48,9 +48,9 @@ export function NavBar() {
       </div>
       {/* -----------mobile-menu------------ */}
       <div
-        className={`md:hidden ${
-          showMobileMenu ? "fixed w-full" : "h-0 w-0"
-        } right-0 top-0 bottom-0 overflow-hidden bg-white transition-all`}
+        className={`md:hidden fixed top-0 right-0 bottom-0 bg-white overflow-hidden transition-all duration-400 ease-in-out ${
+          showMobileMenu ? "w-full opacity-100" : "w-0 opacity-0"
+        }`}
       >
         <div className="flex justify-end p-6 ">
           <img
