@@ -1,6 +1,7 @@
 import { useState } from "react";
-import React from 'react'
+import React from "react";
 import { toast } from "react-toastify";
+import { motion } from "motion/react";
 
 export const Contact = () => {
   const [result, setResult] = React.useState("");
@@ -14,24 +15,28 @@ export const Contact = () => {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
       setResult("");
-      toast.success("Form Submitted Sucessfully")
+      toast.success("Form Submitted Sucessfully");
       event.target.reset();
     } else {
       console.log("Error", data);
-      toast.error(data.message)
+      toast.error(data.message);
       setResult("");
     }
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       className="text-center p-6 py-20 lg:px w-full overflow-hidden"
       id="contact"
     >
@@ -46,7 +51,10 @@ export const Contact = () => {
         Ready to Make a Move? Let's Build Your Future Together
       </p>
 
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto text-gray-600 pt-8">
+      <form
+        onSubmit={onSubmit}
+        className="max-w-2xl mx-auto text-gray-600 pt-8"
+      >
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 text-left">
             Your Name
@@ -85,6 +93,6 @@ export const Contact = () => {
           {result ? result : "Send Message"}
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
